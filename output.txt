@@ -1,0 +1,19 @@
+Отчет компилятора:
+RUN gcc -o main 10_b.c
+50.28 10_b.c: In function 'main':
+50.28 10_b.c:40:26: error: expected ';' before 'printf'
+50.28    40 |                 res /= 10
+50.28       |                          ^
+50.28       |                          ;
+50.28    41 |                 printf("Reverse notation of the number: %d\n", (int)res );
+50.28       |                 ~~~~~~    
+ERROR: process "/bin/sh -c gcc -o main $C_FILE" did not complete successfully: exit code: 1
+
+Отчет Cppcheck:
+/code:40:7: style: Variable 'res' is assigned a value that is never used. [unreadVariable]
+  res /= 10
+      ^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingIncludeSystem]
+
+
+Проверка программы на тестах не запущена из-за возникшей ошибки компиляции.

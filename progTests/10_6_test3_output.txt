@@ -1,0 +1,4 @@
+Введите число: Child is working
+Сумма цифр: 2
+Введите число: Parent is working
+Child terminated normally with exit code 0

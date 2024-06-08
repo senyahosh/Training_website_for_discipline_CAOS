@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CA&OS: Лабораторная работа №1</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/lab_code_style.css">
+</head>
+<body id="LitBG">
+	<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top" data-bs-theme="dark">
+		<div class="container-xxl">
+			<a class="navbar-brand" href="/">CA&OS</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="/Lectures.html">Лекции</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Задания
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/Labs.html">Лабораторные работы</a></li>
+							<li><a class="dropdown-item" href="/Tests.html">Тестирование</a></li>
+							<li><a class="dropdown-item" href="/Indivs.html">Индивидуальные задания</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<div class="btn-group">
+							<a href="/Other.html" class="nav-link"> Прочее </a>
+							<a class="nav-link dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+								<span class="visually-hidden">Toggle Dropdown</span>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="/Other.html#distributions">Дистрибутивы</a></li>
+								<li><a class="dropdown-item" href="/Other.html#help">Справочная информация</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href = "#contact">Контакты</a>
+					</li>
+				</ul>
+				<form class="d-flex me-3" role="search">
+					<input class="form-control me-1" type="search" placeholder="Поиск" aria-label="Search">
+					<button class="btn btn-outline-light" type="submit">Поиск</button>
+				</form>
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="/Authorization.html">Авторизация</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section>
+		<div id="LiteraturePage" class="container-xxl">
+			<div class="lec-container">	
+				<h1 align="center"> Лабораторная работа №1.<br>Введение. Арифметика. Циклы LOOP </h1>
+				<hr style="border: 1px solid rgba(0, 0, 0, 0.6); margin: 30px 0px 20px;">
+				<div class="container-xxl">
+					<p>
+						1. Структура программы на языке ассемблера Intel 8088
+					</p>
+					<p>
+						Структура программы на языке ассемблера выглядит следующим образом.
+					</p> 
+					<code class="clang-assembler">
+						<span class="clang-span">.SECT</span>
+						<span class="clang-span">.TEXT</span> <br>
+						! <последовательность инструкций процессора> <br>	
+						<span class="clang-span">.SECT</span>
+						<span class="clang-span">.DATA</span> <br>
+						! <последовательность команд ассемблера выделения памяти с инициализацией> <br>
+						<span class="clang-span">.SECT</span>
+						<span class="clang-span">.BSS</span> <br>
+						! <последовательность команд выделения памяти без инициализации>
+					</code>			
+					<p>
+						Последние две секции могут быть пустыми, но заголовки всё равно должны присутствовать. Первая секция предназначена для написания кода (инструкций процессору), вторые две — для хранения статических данных, это полный аналог глобальных переменных в высокоуровневых языках программирования (например, C).
+					</p>
+					<p>
+						Пример последовательности инструкций для сложения двух чисел 2 и 3:
+					</p>
+					<code class="clang">
+						<span class="clang-span">MOV</span> &emsp;
+						<span>AX,</span>
+						<span class="clang-span-second">2</span> <br>
+						<span class="clang-span">ADD</span> &emsp;
+						<span>AX,</span>
+						<span class="clang-span-second">3</span>
+					</code>
+					
+					<form id="uploadForm" enctype="multipart/form-data">
+						<input type="file" name="file" id="fileInput" class="fileloader">
+						<button type="submit" class="btn btn-primary" id="load"> Сдать задание </button>
+					</form>
+
+					<div id="container">
+						<div id="reveal-modal">
+							<div id=text>
+								<pre></pre>
+							</div>
+							<button class="btn" id="close"> Закрыть </button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer-dark bg-dark">
+		<p><a name="contact"></a></p>
+		<div class="container-xxl">
+			<div class="row align-items-center">
+				<div class="col-5">
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item bg-dark text-light"> Руководитель курса: доц. к. ф.-м. н. Андреева Евгения Михайловна <br> Кафедра информатики и вычислительного эксперимента </li>
+						<li class="list-group-item bg-dark text-light"> Адрес: г. Ростов-на-Дону, ул. Мильчакова 8А, ауд. 203</li>
+						<li class="list-group-item bg-dark text-light">
+							Телефон:
+							<ol class="list-group list-group-numbered">
+								<li class="bg-dark text-light"> +7(863) 218-40-00 доб. 11062 </li>
+								<li class="bg-dark text-light"> +7(863) 468-08-90 доб. 11062 </li>
+							</ol>
+						</li>
+						<li class="list-group-item bg-dark text-light"> Корпоративная почта: 
+							<a href="#contact" class="link-primary"> andreeva@sfedu.ru </a> 
+						</li>
+						<li class="list-group-item bg-dark text-light"> Персональная страница: <a href="https://sfedu.ru/person/andreeva" class="link-primary"> https://sfedu.ru/person/andreeva </a></li>
+					</ul>
+				</div>
+				<div class="col-2"> </div>
+				<div class="col-5">
+    				<form>
+						<div id="InputForm">
+							<input required type="email" class="form-control" placeholder="example@sfedu.ru">
+						</div>
+						<div id="InputForm">
+							<textarea required type="text" class="form-control" placeholder="Введите сообщение" rows = "4"></textarea>
+						</div>
+						<button class="btn btn-block btn-md btn-outline-light" type="button"> Отправить </button>
+					</form>
+    			</div>
+			</div>
+		</div>
+		<hr id="mainhr">
+		<div class="text-center bg-dark" style="color: rgba(255, 255, 255, 0.5);"> &copy 2023-2024 </div>
+	</footer>
+
+	<script>
+		// Запуск докер-контейнера для компилятора и cppcheck
+		function runCommands(fileName) {
+
+			const filename = fileName;
+			const commands = [
+				'docker build --build-arg C_FILE=' + filename + ' -t c-compiler C:\\Users\\111\\MySite\\uploads\\.',
+				'docker run -v C:\\Users\\111\\MySite\\uploads\\' + filename + ':/code cppcheck-image cppcheck --quiet --enable=all --std=c11 --language=c /code'
+			];
+
+			const testFiles = [];
+
+			const dataToSend = {
+				commands: commands,
+				testFiles: testFiles
+			};
+
+			const socket = new WebSocket('ws://localhost:8080');
+
+			socket.onopen = () => {
+				socket.send(JSON.stringify(dataToSend));
+			};
+
+			socket.onmessage = (event) => {
+				showOutput(event.data);
+			};
+
+			socket.onerror = (error) => {
+				console.error('WebSocket error:', error);
+			};
+		}
+
+		// Всплывающее окно с ошибками	
+		const modal = document.querySelector('#container');
+		const close = document.querySelector('#close');
+
+		function showOutput(output) {
+        	var text = document.getElementById("text");
+			var newNode = document.createElement("pre");
+			var oldNode = text.firstElementChild;
+			newNode.textContent = output;
+			text.replaceChild(newNode, oldNode);
+
+			modal.style.display = 'block';
+			modal.style.visibility = 'visible';
+        }
+
+        close.onclick = function () {
+			modal.style.display = 'none';
+		};
+
+		document.addEventListener('keydown', function(e) {
+			if(e.keyCode == 27) { 
+				modal.style.display = 'none';
+			}
+		});
+
+		// Загрузка файла
+        const uploadForm = document.getElementById('uploadForm');
+    	uploadForm.addEventListener('submit', async (e) => {
+    		e.preventDefault();
+
+    		const formData = new FormData();
+    		const fileInput = document.getElementById('fileInput');
+
+    		if (fileInput.files && fileInput.files.length == 1) {
+    			formData.append('file', fileInput.files[0]);
+    			var filename = fileInput.files[0].name;
+
+    			try {
+	    			const response = await fetch('http://localhost:8000/upload', {
+	    				method: 'POST',
+	    				body: formData
+	    			});
+
+	    			if (response.ok) {
+
+	    				console.log('File uploaded successfully!');
+	    				alert('Файл успешно загружен!\nЗакройте это сообщение, чтобы посмотреть отчёт о проверке.\n\nВнимание! Это может занять некоторое время.');
+	    				
+	    				runCommands(filename);
+	    			
+	    			} else {
+	    				console.error('Failed to upload file');
+	    				alert('Ошибка при загрузке файла.')
+	    			}
+
+	    			uploadForm.reset();
+
+	    		} catch (error) {
+	    			console.error(error);
+	    		}
+    		}
+    		else {
+    			alert('Файл не прикреплен.');
+    		}
+    	});
+
+	</script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

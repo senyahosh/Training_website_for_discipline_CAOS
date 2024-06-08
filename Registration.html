@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CA&OS: Регистрация</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<section id="AuthBG">
+		<div class="prozr"></div>
+		<div id="page" class="container-xxl">
+			<div class="login-container">
+				<a href="/Authorization.html"><img src="css/img/arrow1.jpg" width="30" height="30" border="0"></a>
+				<div id="RegTitle">
+					<h2> Создание учётной записи</h2>
+				</div>
+				<form>
+					<div class="input-group mb-3">
+  						<input required type="email" class="form-control" placeholder="example@sfedu.ru">
+					</div>
+					<div class="input-group mb-3">
+						<input required type="password" class="form-control" placeholder="Пароль" minlength="8">
+					</div>
+					<div class="input-group mb-3">
+						<input required type="text" class="form-control" placeholder="Фамилия" pattern="^[A-Za-zА-Яа-яЁё\s]">
+					</div>
+					<div class="input-group mb-3">
+						<input required type="text" class="form-control" placeholder="Имя" pattern="^[A-Za-zА-Яа-яЁё\s]">
+					</div>
+					<div class="input-group mb-3">
+						<input type="text" class="form-control" placeholder="Отчество (при наличии)" pattern="^[A-Za-zА-Яа-яЁё\s]">
+					</div>
+					<div class="input-group mb-3">
+						<select class="form-select" style="color: rgba(0, 0, 0, 0.7);">
+  							<option selected> Выберите страну</option>
+  							<option value="1">Армения</option>
+  							<option value="2">Беларусь</option>
+  							<option value="3">Грузия</option>
+  							<option value="4">Казахстан</option>
+  							<option value="5">Россия</option>
+  							<option value="6">Таджикистан</option>
+  							<option value="7">Туркменистан</option>
+  							<option value="8">Узбекистан</option>
+  							<option value="9">Украина</option>
+						</select>
+					</div>
+					<div class="input-group mb-3">
+						<input type="text" class="form-control" placeholder="Город" pattern="^[A-Za-zА-Яа-яЁё\s]">
+					</div>
+					<button class="btn btn-md btn-primary" type="button"> Создать учётную запись </button>
+					<a class="btn btn-md btn-secondary" role="button" href="/Authorization.html"> Отмена </a>
+				</form>
+			</div>
+		</div>	
+	</section>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

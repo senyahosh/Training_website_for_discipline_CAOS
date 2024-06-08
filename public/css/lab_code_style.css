@@ -1,0 +1,139 @@
+.clang {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    color: #000;
+    background: #f0f0f0;
+    margin-bottom: 0.5em;
+    font-family: courier, monospace;
+}
+
+.clang-task {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    color: #000;
+    background: #f0f0f0;
+    margin-bottom: 0.5em;
+}
+
+.clang-h4 {
+    margin-left: -12px;
+}
+
+.clang-assembler {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    color: #000;
+    background: #f0f0f0;
+    margin-bottom: 0.5em;
+    font-size: inherit;
+    word-wrap: break-word;
+    word-break: normal;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.clang-code {
+    background-color: #eee;
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 0 3px;
+    color: black;
+}
+
+.clang-text {
+    text-indent: 15px;
+}
+
+.clang-span {
+    font-weight: bold;
+    color: #000080;
+}
+
+.clang-span-second {
+    color: #0000ff;
+}
+
+.fileloader {
+    border: 3px solid #fff;
+    border-radius: 5px;
+    padding: 5px 5px 5px 3px;
+    font-size: 16px;
+    background-color: #fff;
+    font-family: "Segoe UI";
+    margin-top: 15px;
+}
+
+.fileloader::-webkit-file-upload-button {
+    border: 2px solid #212529;
+    background: #212529;
+    color: #F8F9FA;
+    font-family: "Segoe UI";
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#check {
+    border: 2px solid #198754;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-family: "Segoe UI";
+    font-size: 16px;
+}
+
+#load {
+    border: 2px solid #0D6EFD;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-family: "Segoe UI";
+    font-size: 16px;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+#container {
+    width: 60%;
+    height: auto;
+    position: fixed;
+    visibility: hidden;
+    display: none;
+    background-color: rgb(69, 69, 69);
+    border-radius: 7px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    color: white;
+}
+
+#close {
+  float: right;
+  
+  /* Чтобы кнопка имела вид просто текста, без окружения */ 
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+}
+
+.i {
+    font-style: italic;
+}
+
+#uploadForm {
+    margin-left: -13px;
+    margin-top: 15px;
+}

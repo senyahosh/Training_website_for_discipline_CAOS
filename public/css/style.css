@@ -1,0 +1,162 @@
+header, #AuthBG {
+	background-image: url(img/bg.jpg);
+	height: 100vh;
+    overflow: auto;
+	background-attachment: fixed;
+    background-size: cover;
+	background-position: center;
+}
+
+body {
+	margin: 0;
+  	display: flex;
+  	flex-direction: column;
+  	min-height: 100vh;
+}
+
+header, footer {
+	flex-shrink: 0;
+}
+
+section {
+	flex-grow: 1;
+}
+
+a {
+	text-decoration: none;
+	color: #0f6cbf;
+}
+
+.prozr {
+	position: absolute;
+	min-height: 100%;
+    min-width: 100%;
+    background: rgba(244, 244, 244, 0.85);
+}
+.jumbotron {
+	position: absolute;
+    top: 26%;
+    left: 13%;
+    right: 10%;
+    background-color: inherit;
+}
+.form-group {
+	border: 0.5px solid black;
+	border-radius: 6px;
+}
+
+#InputForm {
+	margin-bottom: 0.4rem;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+#mainhr {
+	color: white; 
+	margin-bottom: 0.2em;
+}
+
+
+.login-container {
+    max-width: 600px;
+    border-radius: .3rem;
+    background-color: white;
+    padding: 3rem;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    position: relative;
+    margin: 4rem auto;
+}
+
+#Title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0px auto 30px;
+}
+
+#RegTitle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0px auto 20px;
+}
+
+.previous {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #f1f1f1;
+    color: black;
+    border-radius: 50%;
+}
+
+.lec-container {
+    max-width: 1100px;
+    border-radius: .3rem;
+    background-color: white;
+    padding: 3rem;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    position: relative;
+    margin: 5rem auto;
+}
+
+#LecBG, #LabBG, #OtherBG, #IndivBG, #TestBG, #ProfileBG, #LitBG {
+	background: rgba(190, 220, 227, 1);
+}
+
+.icon_div_blue {
+	background-color: #399be2;
+	width: 50px;
+	height: 50px;
+	border-radius: 4px;
+	align-items: center;
+	justify-content: center;
+	display: inline-flex;
+	margin: 15px 0px 10px 15px;
+}
+
+.icon_div_red {
+	background-color: rgba(220, 20, 60, 0.9);
+	width: 50px;
+	height: 50px;
+	border-radius: 4px;
+	align-items: center;
+	justify-content: center;
+	display: inline-flex;
+	margin: 15px 0px 10px 15px;
+}
+
+.icon {
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+	margin: 0px;
+	filter: brightness(0) invert(1);
+}
+
+.desc_div {
+	align-items: center;
+	justify-content: start;
+	display: inline-flex;
+	margin: 15px -15px;
+	padding: 0px;
+}
+
+.accordion {
+	--bs-accordion-active-color: black;
+    --bs-accordion-active-bg: rgba(0, 0, 0, 0.1);
+    --bs-accordion-btn-focus-box-shadow: none;
+    --bs-accordion-border-color: rgba(190, 220, 227, 0.9);
+    --bs-accordion-border-width: 1.6px;
+}
+
+.line { 
+    border-right: 2px solid #ccc; 
+}
+
+.list-group-item {
+	position: static;
+}

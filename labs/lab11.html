@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CA&OS: Лабораторная работа №11</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/lab_code_style.css">
+</head>
+<body id="LitBG">
+	<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top" data-bs-theme="dark">
+		<div class="container-xxl">
+			<a class="navbar-brand" href="/">CA&OS</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="/Lectures.html">Лекции</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Задания
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/Labs.html">Лабораторные работы</a></li>
+							<li><a class="dropdown-item" href="/Tests.html">Тестирование</a></li>
+							<li><a class="dropdown-item" href="/Indivs.html">Индивидуальные задания</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<div class="btn-group">
+							<a href="/Other.html" class="nav-link"> Прочее </a>
+							<a class="nav-link dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+								<span class="visually-hidden">Toggle Dropdown</span>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="/Other.html#distributions">Дистрибутивы</a></li>
+								<li><a class="dropdown-item" href="/Other.html#help">Справочная информация</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href = "#contact">Контакты</a>
+					</li>
+				</ul>
+				<form class="d-flex me-3" role="search">
+					<input class="form-control me-1" type="search" placeholder="Поиск" aria-label="Search">
+					<button class="btn btn-outline-light" type="submit">Поиск</button>
+				</form>
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="/Authorization.html">Авторизация</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section>
+		<div id="LiteraturePage" class="container-xxl">
+			<div class="lec-container">	
+				<h1 align="center"> Лабораторная работа №11. Разделяемая память. </h1> 
+				<h2 align="center"> Обязательные задания для решения в классе. </h2> 
+				<hr style="border: 1px solid rgba(0, 0, 0, 0.6); margin: 30px 0px 20px;">
+				<div class="container-xxl">
+					<h4 class="clang-h4"> Вариант 1 </h4>
+					<p class="clang-task">
+						Реализовать программу для игры двух пользователей в игру «крестики-нолики» на поле размеров, как минимум, 3 × 3. Процесс должен дождаться запуска взаимодействующего процесса. Далее случайным образом определяется очерёдность ходов, после чего оба процесса по очереди ждут от пользователей ввода данных.
+					</p> 			
+					<h4 class="clang-h4"> Вариант 2 </h4>			
+					<p class="clang-task">
+						Реализовать программу для игры двух пользователей в игру «морской бой». Расположение кораблей игрока можно считывать из файла в виде матрицы занятости клеток без проверки на корректность. Процесс должен дождаться запуска взаимодействующего процесса. Далее случайным образом определяется очерёдность ходов, после чего каждый из процессов в свою очередь ждёт от пользователя ввода данных. Если игрок угадывает клетку, в которой находится корабль противника, он получает право следующего хода. В противном случае право хода передаётся противнику.
+					</p>
+					<h4 class="clang-h4"> Вариант 3 </h4>
+					<p class="clang-task">
+						Реализовать программу, которая дожидается запуска заданного количества экземпляров своего процесса, которым назначаются последовательные номера. Дальше первый процесс генерирует последовательность случайных чисел, которые передаёт по одному второму процессу. Второй процесс увеличивает каждое получаемое число на 1 и передаёт дальше. Последний процесс после увеличения числа выводит его на печать. Передачу значений можно организовать при помощи массива размером, равным количеству процессов минус один.
+					</p> 
+					<h4 class="clang-h4"> Вариант 4 </h4>			
+					<p class="clang-task">
+						Реализовать программу, которая дожидается запуска заданного количества экземпляров своего процесса, которым назначаются последовательные номера. Дальше первый процесс генерирует случайное число, которое передаёт второму процессу. Второй процесс увеличивает число на 1 и передаёт дальше. Последний процесс после увеличения числа передаёт его первому процессу, который после его увеличения выводит на печать. Передачу значений можно организовать при помощи массива размером, равным количеству процессов.
+					</p>
+					<h4 class="clang-h4"> Вариант 5 </h4>
+					<span class="clang-task">
+						<p> 
+							Реализовать две программы, одна из которых генерирует последовательность целых чисел: 
+						</p>
+						<p align="center">
+							<i>x</i><i><sub>i</sub></i>&nbsp;= [<i>A</i>&nbsp;sin(<i>ω</i>&nbsp;<i>i</i>)]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ∀&nbsp;<i>i</i>&nbsp;= 0, 1, ...,&nbsp;<i>T</i>
+						</p>
+						<p>
+							для заданных <i>A, ω</i> и <i>T</i>. (Здесь квадратные скобки обозначают операцию округления). После генерирования очередной порции данных программа записывает их в буфер ограниченного размера и дожидается, пока другая программа не прочитает их оттуда. Вторая программа после получения очередной порции данных должна выводить их на печать.
+						</p>
+					</span>
+					<h4 class="clang-h4"> Вариант 6 </h4>
+					<p class="clang-task">
+						Реализовать две программы, первая из которых, будучи запущенной в нескольких экземплярах процесса, получает свой порядковый номер и записывает его заданное количество раз в буфер ограниченного размера. Другая программа должна  забрать эти данные из буфера и вывести на печать.
+					</p> 
+					<h4 class="clang-h4"> Вариант 7 </h4>			
+					<p class="clang-task">
+						Напишите программы для реализации следующей задачи. Программа клиент генерирует случайным образом <i>N</i> целых чисел в диапазоне от <i>M</i> до <i>K</i> и передает их серверу через разделяемую память. Сервер принимает числа и подсчитывает две суммы - отдельно для четных чисел и для нечетных. Получив все переданные числа, сервер выводит полученные значения сумм на stdout.
+					</p>
+					<h4 class="clang-h4"> Вариант 8 </h4>
+					<p class="clang-task">
+						Напишите программы для реализации следующей задачи. Программа клиент генерирует случайным образом <i>N</i> целых чисел в диапазоне от <i>M</i> до <i>K</i> и передает их серверу через разделяемую память. Сервер принимает числа, возводит их в квадрат и выводит в стандартный поток вывода.  
+					</p> 
+					<h4 class="clang-h4"> Вариант 9 </h4>			
+					<p class="clang-task">
+						Напишите программы для реализации следующей задачи. Программа клиент генерирует случайным образом <i>N</i> целых чисел в диапазоне от <i>M</i> до <i>K</i> и передает их серверу через разделяемую память. Сервер принимает числа и подсчитывает количество чисел, лежащих в диапазоне <i>[M, (K-M)/2-1]</i> и в диапазоне <i>[(K-M)/2, K]</i>. Получив все переданные числа, сервер выводит посчитанные количества на stdout.  
+					</p>
+					<h4 class="clang-h4"> Вариант 10 </h4>
+					<p class="clang-task">
+						Напишите программы для реализации следующей задачи. Программа клиент генерирует случайным образом <i>N</i> целых чисел в диапазоне от <i>M</i> до <i>K</i> и передает их серверу через разделяемую память. Сервер принимает числа и вычисляет среднее арифметическое чисел. Получив все переданные числа, сервер выводит посчитанное значение на stdout. 
+					</p> 
+					<h4 class="clang-h4"> Вариант 11 </h4>			
+					<p class="clang-task">
+						Напишите программы для реализации следующей задачи. Программа клиент записывает в разделяемую память последовательность символов. Сервер принимает эту последовательность и находит в ней наиболее длинную последовательность из подряд идущих одинаковых символов. После чего выводит индекс её начала, длину и символ на stdout.
+					</p>
+					<h4 class="clang-h4"> Вариант 12 </h4>
+					<p class="clang-task">
+						Напишите программы для реализации следующей задачи. Программа клиент записывает в разделяемую память некоторую подстроку, заданной длины и  последовательность символов. Сервер принимает эти данные и находит в подпоследовательности все вхождения заданной строки. После чего выводит позиции начала каждого вхождения на stdout.
+					</p> 
+					<h4 class="clang-h4"> Вариант 13 </h4>			
+					<p class="clang-task">
+						Напишите программы для реализации следующей задачи. Программа клиент записывает в разделяемую память последовательность символов. Сервер принимает эту последовательность и заменяет все строчные латинские символы на заглавные. После чего выводит последовательность на stdout.
+					</p>
+					<h4 class="clang-h4"> Вариант 14 </h4>
+					<p class="clang-task">
+						Напишите программы для реализации следующей задачи. Программа клиент записывает в разделяемую память последовательность символов. Сервер принимает эту последовательность и записывает ее в обратном порядке. После чего выводит результат на stdout.
+					</p> 
+					<h4 class="clang-h4"> Вариант 15 </h4>			
+					<p class="clang-task">
+						Напишите программы для реализации следующей задачи. Программа клиент записывает в разделяемую память последовательность символов. Сервер принимает эту последовательность производит "циклический сдвиг" содержимого на заданное количество байт влево: сначала записать содержимое последовательности с заданной позиции до конца, затем дописать начало последовательности до заданной позиции. 
+					</p>
+
+					<form id="uploadForm" enctype="multipart/form-data">
+						<input type="file" name="file" id="fileInput" class="fileloader">
+						<button type="submit" class="btn btn-primary" id="load"> Сдать задание </button>
+					</form>
+
+					<div id="container">
+						<div id="reveal-modal">
+							<div id=text>
+								<pre></pre>
+							</div>
+							<button class="btn" id="close"> Закрыть </button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer-dark bg-dark">
+		<p><a name="contact"></a></p>
+		<div class="container-xxl">
+			<div class="row align-items-center">
+				<div class="col-5">
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item bg-dark text-light"> Руководитель курса: доц. к. ф.-м. н. Андреева Евгения Михайловна <br> Кафедра информатики и вычислительного эксперимента </li>
+						<li class="list-group-item bg-dark text-light"> Адрес: г. Ростов-на-Дону, ул. Мильчакова 8А, ауд. 203</li>
+						<li class="list-group-item bg-dark text-light">
+							Телефон:
+							<ol class="list-group list-group-numbered">
+								<li class="bg-dark text-light"> +7(863) 218-40-00 доб. 11062 </li>
+								<li class="bg-dark text-light"> +7(863) 468-08-90 доб. 11062 </li>
+							</ol>
+						</li>
+						<li class="list-group-item bg-dark text-light"> Корпоративная почта: 
+							<a href="#contact" class="link-primary"> andreeva@sfedu.ru </a> 
+						</li>
+						<li class="list-group-item bg-dark text-light"> Персональная страница: <a href="https://sfedu.ru/person/andreeva" class="link-primary"> https://sfedu.ru/person/andreeva </a></li>
+					</ul>
+				</div>
+				<div class="col-2"> </div>
+				<div class="col-5">
+    				<form>
+						<div id="InputForm">
+							<input required type="email" class="form-control" placeholder="example@sfedu.ru">
+						</div>
+						<div id="InputForm">
+							<textarea required type="text" class="form-control" placeholder="Введите сообщение" rows = "4"></textarea>
+						</div>
+						<button class="btn btn-block btn-md btn-outline-light" type="button"> Отправить </button>
+					</form>
+    			</div>
+			</div>
+		</div>
+		<hr id="mainhr">
+		<div class="text-center bg-dark" style="color: rgba(255, 255, 255, 0.5);"> &copy 2023-2024 </div>
+	</footer>
+
+	<script>
+		// Запуск докер-контейнера для компилятора и cppcheck
+		function runCommands(fileName) {
+			const filename = fileName;
+			const commands = [
+				'docker build --build-arg C_FILE=' + filename + ' -t c-compiler C:\\Users\\111\\MySite\\uploads\\.',
+				'docker run -v C:\\Users\\111\\MySite\\uploads\\' + filename + ':/code cppcheck-image cppcheck --quiet --enable=all --std=c11 --language=c /code'
+			];
+
+			const testFiles = [];
+
+			const dataToSend = {
+				commands: commands,
+				testFiles: testFiles
+			};
+
+			const socket = new WebSocket('ws://localhost:8080');
+
+			socket.onopen = () => {
+				socket.send(JSON.stringify(dataToSend));
+			};
+
+			socket.onmessage = (event) => {
+				showOutput(event.data);
+			};
+
+			socket.onerror = (error) => {
+				console.error('WebSocket error:', error);
+			};
+		}
+
+		// Всплывающее окно с ошибками	
+		const modal = document.querySelector('#container');
+		const close = document.querySelector('#close');
+
+		function showOutput(output) {
+        	var text = document.getElementById("text");
+			var newNode = document.createElement("pre");
+			var oldNode = text.firstElementChild;
+			newNode.textContent = output;
+			text.replaceChild(newNode, oldNode);
+
+			modal.style.display = 'block';
+			modal.style.visibility = 'visible';
+        }
+
+        close.onclick = function () {
+			modal.style.display = 'none';
+		};
+
+		document.addEventListener('keydown', function(e) {
+			if(e.keyCode == 27) {
+				modal.style.display = 'none';
+			}
+		});
+
+		// Загрузка файла
+        const uploadForm = document.getElementById('uploadForm');
+    	uploadForm.addEventListener('submit', async (e) => {
+    		e.preventDefault();
+
+    		const formData = new FormData();
+    		const fileInput = document.getElementById('fileInput');
+
+    		if (fileInput.files && fileInput.files.length == 1) {
+    			formData.append('file', fileInput.files[0]);
+    			var filename = fileInput.files[0].name;
+
+    			try {
+	    			const response = await fetch('http://localhost:8000/upload', {
+	    				method: 'POST',
+	    				body: formData
+	    			});
+
+	    			if (response.ok) {
+
+	    				console.log('File uploaded successfully!');
+	    				alert('Файл успешно загружен!\nЗакройте это сообщение, чтобы посмотреть отчёт о проверке.\n\nВнимание! Это может занять некоторое время.');
+	    				
+	    				runCommands(filename);
+	    			
+	    			} else {
+	    				console.error('Failed to upload file');
+	    				alert('Ошибка при загрузке файла.')
+	    			}
+
+	    			uploadForm.reset();
+
+	    		} catch (error) {
+	    			console.error(error);
+	    		}
+    		}
+    		else {
+    			alert('Файл не прикреплен.');
+    		}
+    	});
+
+	</script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
